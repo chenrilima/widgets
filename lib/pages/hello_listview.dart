@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Dog {
@@ -13,6 +14,16 @@ class HelloListView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("ListView"),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.list),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(Icons.grid_on),
+            onPressed: () {},
+          )
+        ],
         centerTitle: true,
       ),
       body: _body(),
@@ -20,8 +31,7 @@ class HelloListView extends StatelessWidget {
   }
 }
 
-_body () {
-
+_body() {
   List<Dog> dogs = [
     Dog("Jack", "assets/images/dog1.png"),
     Dog("Labra", "assets/images/dog2.png"),
@@ -30,18 +40,43 @@ _body () {
     Dog("Pastor", "assets/images/dog5.png"),
   ];
 
-  return ListView.builder(
+  return GridView.builder(
       itemCount: dogs.length,
-      itemExtent: 300,
+     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+       crossAxisCount: 2
+     ),
       itemBuilder: (context, index) {
-
         Dog dog = dogs[index];
 
-        return _img(dog.foto);
-    });
+        return Stack(
+          fit: StackFit.expand,
+          children: [
+            _img(dog.foto),
+            Align(
+              alignment: Alignment.topLeft,
+              child: Container(
+                margin: EdgeInsets.all(12),
+                padding: EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: Colors.black45,
+                  borderRadius: BorderRadius.circular(16)
+                ),
+              child: Text(
+              dog.nome,
+              style: TextStyle(
+                fontSize: 26,
+                color: Colors.white,
+              ),
+        ),
+            ),
+            ),
+        ],
+        );
+      },
+      );
 }
 
- _img(String img) {
+_img(String img) {
   return Image.asset(
     img,
     fit: BoxFit.cover,
