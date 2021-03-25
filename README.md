@@ -1,16 +1,34 @@
-# flutter_lacheta1
+# Estudos sobre Widgets
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/chenrilima/widgets/blob/master/LICENSE) 
 
-A new Flutter application.
 
-## Getting Started
+# Sobre o projeto
 
-This project is a starting point for a Flutter application.
+O App é uma aplicação mobile que está sendo construída durante o Curso de Flutter realizado na **Plataforma Udemy** (https://udemy.com).
+Na verdade, esse curso tem sido um divisor de águas nos meus estudos sobre o Flutter, pois estamos vendo a maioria dos widgets, usando um código mais limpo, organizando classes e métodos.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Layout mobile
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![pageview](https://user-images.githubusercontent.com/58492693/112442704-e5e40180-8d2a-11eb-95fa-f35758716b60.gif)
+
+
+![listview](https://user-images.githubusercontent.com/58492693/112442766-f4321d80-8d2a-11eb-91c5-e1f7c30015a9.gif)
+
+
+![navigator](https://user-images.githubusercontent.com/58492693/112442792-fb592b80-8d2a-11eb-8aba-6852fcf4422b.gif)
+
+
+# Tecnologias utilizadas
+## Back end
+- Dart
+## Front end
+- Flutter
+
+# Autor
+
+Carlos Henrique Lima de Souza
+
+https://www.linkedin.com/in/carlos-henrique-b07192a7/
+
+
